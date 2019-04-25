@@ -1,34 +1,44 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
   <meta charset='utf-8' />
   <title>Tetrafit</title>
   <link href='css/demo.css' rel='stylesheet' type='text/css' media='screen' />
 </head>
+
 <body>
-
-  <h1>Tetrafit</h1>
-
+  <div class="header"></div>
+  <div class="title">
+    <h1>Tetrafit</h1>
+    <h2>Organisation de la logistique des transports</h2>
+  </div>
+  <div class="category-choice">
+    <label for="category-choice">Choix de la catégorie des caisses</label>
+    <select name="category" id="category">
+      <option value="0">Lumiere</option>
+      <option value="1">Son</option>
+      <option value="2">Structure</option>
+    </select>
+    <div class="input-desc"></div>
+  </div>
   <div id="settings">
-
     <div class='examples'>
       <label for='examples'>Import commande: </label>
       <select class='example'>
-        <option value='complex'>  cmd00001       </option>
+        <option value='complex'> cmd00001 </option>
       </select>
     </div>
 
     <div class='blocks'>
-      <label for='blocks'>Entrez vos caisses: <span class='example'><b>W</b>x<b>H</b>[x<b>N</b>]</span></label>
+      <label for='blocks'>Vos caisse: <span class='example'><b>Largeur</b>x<b>Longueur</b>[x<b>Nombre</b>]</span></label>
       <textarea class='block_color' rows=12></textarea>
     </div>
-
-
     <div class='size'>
-      <label for='size'>size: </label>
+      <label for='size'>Camion: </label>
       <select class='size_block'>
-        <option selected>250x1350</option>
-        <option>800x600</option>
+        <option selected value="250x1350">Poid lourd: 38t</option>
+        <option value="250x600">20m3</option>
         <option>automatic</option>
       </select>
     </div>
@@ -43,16 +53,6 @@
         <option>area</option>
         <option>random</option>
         <option>type_</option>
-      </select>
-    </div>
-
-    <div class='color'>
-      <label for='color'>Couleur: </label>
-      <ul class='color_desc'>
-        <li>Lumiere : Jaune</li>
-        <li>Son : Rouge</li>
-        <li>Structure : Vert</li>
-      </ul>
       </select>
     </div>
 
@@ -72,12 +72,23 @@
       </div>
     </canvas>
   </div>
+  <div class='color'>
+      <label for='color'>Couleur: </label>
+      <ul class='color_desc'>
+        <li>Lumiere : Jaune</li>
+        <li>Son : Rouge</li>
+        <li>Structure : blue</li>
+      </ul>
+      </select>
+    </div>
 
 
-  <script src='js/jquery.js'>        </script>
-  <script src='js/packer.js'>        </script>
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+  <script src='js/packer.js'> </script>
   <script src='js/packer.growing.js'></script>
-  <script src='js/demo.js'>          </script>
+  <script src='js/demo.js'> </script>
 
 </body>
+
 </html>

@@ -16,7 +16,7 @@
 
 *******************************************************************************/
 
-  
+
 Demo = {
 
   init: function () {
@@ -94,6 +94,23 @@ Demo = {
         nofit.push("" + block.w + "x" + block.h);
     }
     Demo.el.ratio.text(Math.round(100 * fit / (w * h)));
+    if (Demo.el.ratio.text() >= 80) {
+      $(".ratios").css({
+        color: "green"
+      });
+    } else if (Demo.el.ratio.text() >= 60 && Demo.el.ratio.text() <= 80) {
+      $(".ratios").css({
+        color: "yellow"
+      });
+    } else if (Demo.el.ratio.text() >= 40 && Demo.el.ratio.text() <= 60) {
+      $(".ratios").css({
+        color: "orangered"
+      });
+    } else {
+      $(".ratios").css({
+        color: "red"
+      });
+    }
     Demo.el.nofit.html("Ce qui ne rentre pas dans le camion :  (" + nofit.length + ") :<br>" + nofit.join(", ")).toggle(nofit.length > 0);
   },
   //---------------------------------------------------------------------------
@@ -328,7 +345,7 @@ Demo = {
 function creatInput(id) {
   var largeur = document.createElement("input");
   largeur.id = id;
-  largeur.className ="largeur";
+  largeur.className = "largeur";
   var labelLargeur = document.createElement("label")
   labelLargeur.htmlFor = id;
   labelLargeur.textContent = "Largeur : "
@@ -336,7 +353,7 @@ function creatInput(id) {
 
   var longueur = document.createElement("input");
   longueur.id = id;
-  longueur.className ="longueur";
+  longueur.className = "longueur";
   var labelLongueur = document.createElement("label")
   labelLongueur.htmlFor = id;
   labelLongueur.textContent = "longueur : "
@@ -344,7 +361,7 @@ function creatInput(id) {
 
   var nombre = document.createElement("input");
   nombre.id = id;
-  nombre.className ="nombre";
+  nombre.className = "nombre";
   var labelNombre = document.createElement("label")
   labelNombre.htmlFor = id;
   labelNombre.textContent = "Nombre : "
@@ -372,7 +389,7 @@ $("#category option").on("click", function () {
 
 $(".input-desc").on('keypress', function (e) {
   if (e.which == 13) {
-    var val = $(".input-desc .largeur").val()+"x"+$(".input-desc .longueur").val()+"x"+$(".input-desc .nombre").val();
+    var val = $(".input-desc .largeur").val() + "x" + $(".input-desc .longueur").val() + "x" + $(".input-desc .nombre").val();
     val += "x" + $(".input-desc input").attr("id") + "\n";
     var acienneVal = $(".block_color").val();
     $(".block_color").val(acienneVal + val)

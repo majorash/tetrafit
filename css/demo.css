@@ -12,11 +12,13 @@ body main {
 
 #settings {
     display: flex;
-    /* width: 60em; */
     padding: 1em;
     float: left;
-    border: 1px solid #999;
+    border: 3px solid #999;
     margin: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 10px #999;
+    width: 100%;
 }
 
 #settings div {
@@ -161,4 +163,8 @@ h1 {
 h2 {
     font-size: 2rem;
     letter-spacing: 2px;
+}
+
+.ratio {
+    flex-direction: row !important;
 }

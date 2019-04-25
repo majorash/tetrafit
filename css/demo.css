@@ -1,10 +1,48 @@
+body main {
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    background-image: url('../asset/black-s.png');
+    ;
+    background-repeat: no-repeat;
+    background-position: 75% 7%;
+    color: #ddd;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 #settings {
     display: flex;
-    width: 60em;
+    /* width: 60em; */
     padding: 1em;
     float: left;
     border: 1px solid #999;
     margin: auto;
+}
+
+#settings div {
+    width: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#settings div select {
+    background-color: black;
+    color: #DDD;
+    border-radius: 7px 7px 0 0;
+    border: 2px #222222 solid;
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
+    background-image: url("../asset/icone_fleche.png");
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: right;
+    cursor: pointer;
 }
 
 #settings .examples {
@@ -33,7 +71,8 @@
 .color {
     text-align: center;
 }
-.color ul{
+
+.color ul {
     list-style: none;
 }
 
@@ -52,9 +91,9 @@
 
 #canvas {
     background-color: #FBFBFB;
+    transform-origin: top left;
     transform: rotate(-90deg);
-    margin: -146px auto;
-    display: block;
+    margin-top: 256px;
 }
 
 #unsupported {
@@ -92,27 +131,34 @@ select {
     background-position: center top;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    background-color: #222;
-    background-image: url('../asset/black-s.png');
-    ;
-    background-repeat: no-repeat;
-    background-position: 75% 7%;
-    color: #ddd;
-}
-
 .title {
     text-align: center;
 }
-.category-choice{
+
+.category-choice {
     text-align: center;
-margin-top: 2%;
+    margin-top: 2%;
 }
-.input-desc{
-    padding-top: 10px;
+
+.input-desc {
+    padding: 25px 0 25px 0
 }
-.input-desc label{
-padding: 15px;
+
+.input-desc label {
+    padding: 15px;
+}
+
+.letterSize {
+    font-size: 1.4em;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
 }

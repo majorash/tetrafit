@@ -16,6 +16,7 @@
 
 *******************************************************************************/
 
+  
 Demo = {
 
   init: function () {
@@ -45,7 +46,6 @@ Demo = {
     Demo.el.color.change(Demo.run);
     Demo.el.examples.change(Demo.blocks.examples.change);
     Demo.run();
-
     Demo.el.blocks.keypress(function (ev) {
       if (ev.which == 13)
         Demo.run(); // run on <enter> while entering block information
@@ -154,7 +154,6 @@ Demo = {
       var sort = Demo.el.sort.val();
       if (sort != 'none')
         blocks.sort(Demo.sort[sort]);
-      console.log(blocks.sort(Demo.sort[sort]));
 
     }
   },
@@ -314,7 +313,7 @@ Demo = {
   //---------------------------------------------------------------------------
 
   colors: {
-    couleur: ["yellow", "red", "blue"],
+    couleur: ["#E5E059", "#5AE681", "#925AE6"],
   },
 
   color: function (n) {
@@ -332,7 +331,7 @@ function creatInput(id) {
   largeur.className ="largeur";
   var labelLargeur = document.createElement("label")
   labelLargeur.htmlFor = id;
-  labelLargeur.textContent = "Largeur"
+  labelLargeur.textContent = "Largeur : "
   labelLargeur.appendChild(largeur)
 
   var longueur = document.createElement("input");
@@ -340,7 +339,7 @@ function creatInput(id) {
   longueur.className ="longueur";
   var labelLongueur = document.createElement("label")
   labelLongueur.htmlFor = id;
-  labelLongueur.textContent = "longueur"
+  labelLongueur.textContent = "longueur : "
   labelLongueur.appendChild(longueur)
 
   var nombre = document.createElement("input");
@@ -348,7 +347,7 @@ function creatInput(id) {
   nombre.className ="nombre";
   var labelNombre = document.createElement("label")
   labelNombre.htmlFor = id;
-  labelNombre.textContent = "Nombre"
+  labelNombre.textContent = "Nombre : "
   labelNombre.appendChild(nombre)
   $(".input-desc").append(labelLargeur)
   $(".input-desc").append(labelLongueur)

@@ -1,0 +1,118 @@
+#settings {
+    display: flex;
+    width: 60em;
+    padding: 1em;
+    float: left;
+    border: 1px solid #999;
+    margin: auto;
+}
+
+#settings .examples {
+    margin-bottom: 1em;
+}
+
+#settings .blocks {}
+
+#settings .blocks .letter {
+    color: #999;
+    font-style: italic;
+    float: right;
+    margin-right: 1em;
+}
+
+#settings .size {
+    clear: both;
+    float: right;
+}
+
+#settings .sort {
+    clear: both;
+    float: right;
+}
+
+.color {
+    text-align: center;
+}
+.color ul{
+    list-style: none;
+}
+
+#settings .ratio {
+    clear: both;
+    border: 1px solid #999;
+    padding: 1em;
+}
+
+#settings .nofit {
+    display: none;
+    border: 1px solid red;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+#canvas {
+    background-color: #FBFBFB;
+    transform: rotate(-90deg);
+    margin: -146px auto;
+    display: block;
+}
+
+#unsupported {
+    border: 1px solid red;
+    background-color: #FFFFAD;
+    padding: 1em;
+    margin: 1em;
+}
+
+textarea {
+    resize: none;
+}
+
+select {
+    width: 8em;
+}
+
+/* Ajout css */
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.header {
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 107px;
+    z-index: 30;
+    background-image: url('../asset/header-sgroup-214.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    background-image: url('../asset/black-s.png');
+    ;
+    background-repeat: no-repeat;
+    background-position: 75% 7%;
+    color: #ddd;
+}
+
+.title {
+    text-align: center;
+}
+.category-choice{
+    text-align: center;
+margin-top: 2%;
+}
+.input-desc{
+    padding-top: 10px;
+}
+.input-desc label{
+padding: 15px;
+}
